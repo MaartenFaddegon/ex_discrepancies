@@ -43,3 +43,23 @@ test discrepancy 1 (ExDiscrepanciesTest)
              (stdlib 3.11.2) gen_server.erl:690: :gen_server.handle_msg/6
              (stdlib 3.11.2) proc_lib.erl:249: :proc_lib.init_p_do_apply/`
 ```
+
+# Discrepancy 2
+
+Discrepancy between the expected type of the value returned by the client api
+and the type of the return value send to the client by the function that is
+executed on the server to handle the call.
+
+```
+test discrepancy 2 (ExDiscrepanciesTest)
+     test/ex_discrepancies_test.exs:9
+     Expected truthy, got false
+     code: assert is_binary(s)
+     arguments:
+
+         # 1
+         43
+
+     stacktrace:
+       test/ex_discrepancies_test.exs:11: (test)
+```
