@@ -66,7 +66,8 @@ test discrepancy 2 (ExDiscrepanciesTest)
 
 # Discrepancy 3
 
-Discrepancy between the type `{:ok, integer} | {:error, String.t}` and `{:error, integer}`.
+Discrepancy between the type `{:ok, integer} | {:error, String.t}`
+and the type `{:error, integer}`.
 
 ```
 test discrepancy 3 (ExDiscrepanciesTest)
