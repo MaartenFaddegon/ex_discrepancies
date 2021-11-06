@@ -22,7 +22,13 @@ done (passed successfully)
 
 For each example there is also a test that demonstrates how the discrepancy can lead to
 a crash or other undesired behaviour.
-The tests can be found in the `test/` folder.
+The tests can be found in the `test/` folder and can be run with
+
+```
+mix test
+```
+
+(Note: every test intentionally fails).
 
 # Discrepancy 1
 
