@@ -1,6 +1,4 @@
 defmodule Discrepancy1 do
-
-
   use GenServer
 
   # client APIs
@@ -11,11 +9,11 @@ defmodule Discrepancy1 do
     pid
   end
 
-  @spec my_api(pid, integer) :: String.t
+  @spec my_api(pid, integer) :: String.t()
   def my_api(pid, arg) do
     GenServer.call(pid, {:my_api, arg})
   end
- 
+
   # server implementation
 
   @impl true
@@ -29,9 +27,8 @@ defmodule Discrepancy1 do
     {:reply, res, state}
   end
 
-  @spec uppercase(String.t) :: String.t
+  @spec uppercase(String.t()) :: String.t()
   defp uppercase(arg) do
     String.upcase(arg)
   end
-
 end
