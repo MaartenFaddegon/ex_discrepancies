@@ -1,5 +1,8 @@
 defmodule ExDiscrepanciesTest do
   use ExUnit.Case
-  doctest ExDiscrepancies
+
+  test "discrepancy 1" do
+    Discrepancy1.start_link |> Discrepancy1.my_api(42)
+  end
 
 end
