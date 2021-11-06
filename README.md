@@ -1,17 +1,18 @@
 # ExDiscrepancies
 
 A collection of discrepancies that can cause failure but that are not found by
-[DIALYZER(https://www.erlang.org/doc/man/dialyzer.html)], 
+[DIALYZER](https://www.erlang.org/doc/man/dialyzer.html), 
 a DIscrepancy AnaLYZer for ERlang programs.
 
-This project can be typechecked with
+The example discrepancies can be found in the `lib/` folder.
+The examples in this project can be typechecked with
 
 ```
 mix deps.get
 mix dialyzer
 ```
 
-which returns
+which (unexpectedly) returns
 
 ```
 Total errors: 0, Skipped: 0, Unnecessary Skips: 0
@@ -19,7 +20,6 @@ done in 0m0.97s
 done (passed successfully)
 ```
 
-The example discrepancies can be found in the `lib/` folder.
 For each example there is also a test that demonstrates how the discrepancy can lead to
 a crash or other undesired behaviour.
 The tests can be found in the `test/` folder.
