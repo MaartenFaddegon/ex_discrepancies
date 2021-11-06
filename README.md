@@ -63,3 +63,21 @@ test discrepancy 2 (ExDiscrepanciesTest)
      stacktrace:
        test/ex_discrepancies_test.exs:11: (test)
 ```
+
+# Discrepancy 3
+
+Discrepancy between the type `{:ok, integer} | {:error, String.t}` and `{:error, integer}`.
+
+```
+test discrepancy 3 (ExDiscrepanciesTest)
+     test/ex_discrepancies_test.exs:14
+     Expected truthy, got false
+     code: assert valid_result(Discrepancy3.safe_div(6, 0))
+     arguments:
+
+         # 1
+         {:error, 0}
+
+     stacktrace:
+       test/ex_discrepancies_test.exs:16: (test)
+```
